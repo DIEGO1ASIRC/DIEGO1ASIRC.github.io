@@ -1,0 +1,331 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0f0f0f;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #ff4757;
+}
+
+/* Encabezado */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #121212;
+    padding: 20px 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+.logo h1 {
+    font-size: 28px;
+    color: #ff4757;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: uppercase;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #ff4757;
+}
+
+.user-actions a {
+    margin-left: 15px;
+    padding: 10px 20px;
+    background-color: #ff4757;
+    border-radius: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.user-actions a:hover {
+    background-color: #ff6b81;
+}
+
+/* Hero / Banner */
+.hero {
+    background-image: url('imagenes/vivelaadrenalina.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    animation: fadeInUp 1s ease-in-out;
+    text-transform: uppercase;
+}
+
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.btn {
+    padding: 15px 30px;
+    background: linear-gradient(45deg, #ff4757, #ff6b81);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(255, 71, 87, 0.5);
+}
+
+/* Sección Noticias */
+.section {
+    padding: 80px 50px;
+    text-align: center;
+    position: relative;
+}
+
+.section h2 {
+    font-size: 36px;
+    color: #ff4757;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 4px;
+    background-color: #ff4757;
+}
+
+.news-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+article {
+    background-color: #1c1c1e;
+    border-radius: 10px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    max-width: 300px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+article:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 12px 25px rgba(255, 71, 87, 0.5);
+}
+
+article img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+article h3 {
+    font-size: 22px;
+    color: #ff4757;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+/* Sección de Equipamiento */
+#equipamiento {
+    padding: 80px 50px;
+    text-align: center;
+}
+
+.equipment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.equipment-item {
+    background-color: #1c1c1e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.equipment-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 12px 25px rgba(255, 71, 87, 0.5);
+}
+
+.equipment-item h3 {
+    font-size: 22px;
+    color: #ff4757;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+/* Sección de Competiciones */
+#competiciones {
+    padding: 80px 50px;
+    text-align: center;
+    position: relative;
+}
+
+#competiciones h2 {
+    font-size: 36px;
+    color: #ff4757;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+#competiciones p {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+#competiciones .btn {
+    padding: 15px 30px;
+    background: linear-gradient(45deg, #ff4757, #ff6b81);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+#competiciones .btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(255, 71, 87, 0.5);
+}
+
+/* Sección de Foro */
+#foro {
+    padding: 80px 50px;
+    text-align: center;
+    position: relative;
+}
+
+#foro h2 {
+    font-size: 36px;
+    color: #ff4757;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+#foro p {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+#foro .btn {
+    padding: 15px 30px;
+    background: linear-gradient(45deg, #ff4757, #ff6b81);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+#foro .btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(255, 71, 87, 0.5);
+}
+
+/* Footer */
+footer {
+    background-color: #121212;
+    padding: 40px 30px;
+    text-align: center;
+    color: white;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer .social-media a {
+    margin: 0 10px;
+    color: #ff4757;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+footer .social-media a:hover {
+    color: #ff6b81;
+}
